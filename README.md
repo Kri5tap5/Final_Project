@@ -2,11 +2,11 @@
 This is a small AI Assistant project of mine which can be run on Android using Expo-Go or as a desktop app using tkinter
 
 The AI Assistant is equiped with tools such as:
-  "World News"
+  # "World News"
     -Returns the top news articles from a specified country with parameters, such as 'country', 'category' and 'querry'
-  "Current Weather"
+  # "Current Weather"
     -Tells you the current weather of a location that you would like to know about
-  "Random Fact"
+  # "Random Fact"
     - Tells you a random fact or a fact of the day to lighten up your mood in the morning
   "Coordinates City"
     -This returns precise coordinates of a city that you would like to know about

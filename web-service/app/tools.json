@@ -1,0 +1,128 @@
+[
+  {"type": "function",
+    "function": {
+      "name": "world_news",
+      "description": "Use this function if the user wants to hear the latest news articles.",
+      "parameters": {
+        "type": "object",
+        "properties":{
+          "country": {"type": "string", "description": "The name of a country based on the Alpha-2 codes"},
+          "category": {"type": "string", "description": "The category of the query the user wants to search"},
+          "q": {"type": "string", "description": "query of the user, for example 'gamestop price'."}
+        },
+        "required": ["country"]
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "current_weather",
+      "description": "This function returns the weather of a location specified by the user. Call this function if the user wants to know the latest weather in a specified city",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "The city of witch the user wants to know the weather of"}
+        },
+        "required": ["city"],
+        "strict": "True"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "random_fact",
+      "description": "Call this function if the user wants to hear a RANDOM fact or a fact of TODAY. Returns a random fact or a fact of today based on user request",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "fact_type": {"type": "string", "description": "The type of fact the user wants to hear. Apply either 'today' or 'random' values. No other values will work"}
+        },
+        "required": ["fact_type"],
+        "strict" : "True"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "coordinates_city",
+      "description": "Returns the longitude and latitude coordinates of a city mentioned at the users request.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "city": {"type": "string", "description": "The name of a city"}
+        },
+        "required": ["city"],
+        "strict" : "True"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "stocks_yesterday",
+      "description": "Returns the stock value of a mentioned stock(ticker)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {"type": "string", "description": "The 'ticker' value of a stock. For example AAPL for Apple and AMZN for Amazon"}
+        },
+        "required": ["ticker"],
+        "strict" : "True"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "name_days_of_today",
+      "description": "Returns the names of people who are celebrating their name day today",
+      "parameters": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "compare_stock_values",
+      "description": "Helps you compare the users purchased stock values to the values of these stocks today.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {"type": "string","description": "The 'ticker' value of a stock. For example AAPL for Apple and AMZN for Amazon"},
+          "stock_purchase_value": {"type": "string","description": "The value at witch the user bought the stock. If the user does not provide one, apply the value None. This value is not mandatory"}
+        },
+        "required": ["ticker"],
+        "strict": "False"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "delete_purchase_price",
+      "description": "Call this function if the user wants to erase his original stock ticker purchase value from the database",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {"type": "string","description": "The 'ticker' value of a stock. For example AAPL for Apple and AMZN for Amazon"}
+        },
+        "required": ["ticker"],
+        "strict" : "True"
+      }
+    }
+  },
+  {"type": "function",
+    "function": {
+      "name": "update_purchase_price",
+      "description": "Call this function if the user wants to update his original stock ticker purchase value in the database",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "ticker": {"type": "string","description": "The 'ticker' value of a stock. For example AAPL for Apple and AMZN for Amazon"},
+           "stock_purchase_value": {"type": "string","description": "The value at witch the user actually bought the stock. This value is mandatory"}
+        },
+        "required": ["ticker", "stock_purchase_value"],
+        "strict" : "True"
+      }
+    }
+  }
+]

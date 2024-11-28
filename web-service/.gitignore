@@ -1,0 +1,4 @@
+app/.env
+web-service-env/
+venv/
+app/__pycache__/

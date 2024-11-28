@@ -1,0 +1,7 @@
+expo-env.d.ts
+package-lock.json
+expo-client/config.json
+
+
+.expo/
+node_modules/
